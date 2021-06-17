@@ -16,6 +16,7 @@
         <th>Email</th>
         <th>Created At</th>
         <th>Updated At</th>
+        <th>Action</th>
     </tr>
     {% for user in all_users %}
         <tr>
@@ -25,6 +26,7 @@
         <td>{{ user.email }}</td>
         <td>{{ user.created_at }}</td>
         <td>{{ user.updated_at }}</td>
+        <td><a href="/users/{{ user.id }}">Show</a> | <a href="/users/{{user.id}}/edit">Edit</a> | <a href="/users/{{user.id}}/delete">Delete</a></td>
         </tr>
     {% endfor %}
     </table>
